@@ -11,9 +11,8 @@ return [
             return;
         }
         echo '<p> Welcome ' . ucfirst($params['name'] ?? 'Visitante') . '!</p>';
-        if (!empty($params['message'])) {
-            echo '<p>' . htmlspecialchars($params['message']) . '</p>';
-        }
+        echo '<pre>' . htmlspecialchars(print_r($params, true)) . '</pre>';
+
     },
 
     '/logout' => function () {
