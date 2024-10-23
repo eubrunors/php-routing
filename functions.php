@@ -8,5 +8,9 @@ function run(string $url, array $routes): void
         return;
     }
     $callback = $routes[$path];
-    $callback();
+    $params = [];
+    if(!empty($uri['query'])){
+        parse_str($uri['query'], $params);
+    }
+    $callback($params);
 }
