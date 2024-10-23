@@ -15,6 +15,7 @@ return [
             echo '<p>' . htmlspecialchars($params['message']) . '</p>';
         }
     },
+
     '/logout' => function () {
     header('location: /login?logged_out=true');
     }
